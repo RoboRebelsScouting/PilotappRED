@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="scouting2017.pilotappred.two"
+    android:clickable="true">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/airship"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Gear At Position 1"
+        android:id="@+id/pos1go"
+        android:clickable="true"
+        android:background="#1eed14"
+        android:layout_marginStart="48dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentStart="false"
+        android:layout_marginBottom="131dp"
+        android:enabled="true"
+        android:onClick="position_1go"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Gear At Position 2"
+        android:id="@+id/pos2go"
+        android:clickable="true"
+        android:background="#1eed14"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:enabled="true"
+        android:onClick="position_2go"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="Gear At Position 3"
+        android:id="@+id/pos3go"
+        android:clickable="true"
+        android:background="#1eed14"
+        android:layout_alignTop="@+id/pos1go"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginStart="61dp"
+        android:enabled="true"
+        android:onClick="position_3go"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot1Drop_1"
+        android:layout_alignStart="@+id/pos1go"
+        android:layout_marginTop="130dp"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_1drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_1"
+        android:layout_marginLeft="80dp"
+        android:layout_alignStart="@+id/pos1go"
+        android:layout_marginTop="130dp"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_1stop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot2Drop_1"
+        android:background="#f7ff00"
+        android:layout_alignStart="@+id/Pilot1Drop_1"
+        android:layout_marginTop="210dp"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_1drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot2Stop_1"
+        android:background="#ff0000"
+        android:layout_marginLeft="80dp"
+        android:layout_alignStart="@+id/pos1go"
+        android:layout_marginTop="210dp"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_1stop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos1pilot1"
+        android:layout_marginTop="160dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos1pilot2"
+        android:layout_marginTop="245dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Drop"
+        android:id="@+id/Pilot1Drop_2"
+        android:background="#f7ff00"
+        android:layout_below="@+id/pos2go"
+        android:layout_alignStart="@+id/pos2go"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_2drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Drop"
+        android:id="@+id/Pilot2Drop_2"
+        android:background="#f7ff00"
+        android:layout_below="@+id/Pilot1Drop_2"
+        android:layout_alignStart="@+id/pos2go"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_2drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_2"
+        android:background="#ff0000"
+        android:layout_alignBottom="@+id/Pilot1Drop_2"
+        android:layout_toEndOf="@+id/Pilot1Drop_2"
+        android:layout_marginLeft="9dp"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_2stop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="Stop"
+        android:id="@+id/Pilot2Stop_2"
+        android:layout_marginLeft="80dp"
+        android:background="#ff0000"
+        android:layout_alignTop="@+id/Pilot2Drop_2"
+        android:layout_alignEnd="@+id/Pilot1Stop_2"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_2stop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos2pilot1"
+        android:layout_toStartOf="@+id/Pilot1Drop_2"
+        android:layout_marginTop="325dp"
+        android:layout_marginRight="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos2pilot2"
+        android:layout_toStartOf="@+id/Pilot1Drop_2"
+        android:layout_marginTop="390dp"
+        android:layout_marginRight="35dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot1Drop_3"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:layout_alignStart="@+id/pos3go"
+        android:layout_marginTop="130dp"
+        android:enabled="false"
+        android:onClick="P1position_3drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot2Drop_3"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:layout_alignTop="@+id/Pilot2Stop_1"
+        android:layout_alignStart="@+id/Pilot1Drop_3"
+        android:enabled="false"
+        android:onClick="P2position_3drop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_3"
+        android:layout_marginLeft="9dp"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/Pilot1Drop_3"
+        android:layout_toEndOf="@+id/Pilot1Drop_3"
+        android:enabled="false"
+        android:onClick="P1position_3stop"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot2Stop_3"
+        android:background="#ff0000"
+        android:layout_marginLeft="9dp"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/Pilot2Drop_3"
+        android:layout_toEndOf="@+id/Pilot2Drop_3"
+        android:enabled="false"
+        android:onClick="P2position_3stop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos3pilot1"
+        android:layout_alignBottom="@+id/Pilot1Stop_3"
+        android:layout_toEndOf="@+id/Pilot1Stop_3"
+        android:layout_toStartOf="@+id/Pilot1Drop_3"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos3pilot2"
+        android:layout_alignBottom="@+id/Pilot2Stop_3"
+        android:layout_toEndOf="@+id/Pilot2Stop_3"
+        android:layout_toStartOf="@+id/Pilot2Drop_3"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_alignTop="@+id/pos2pilot2"
+        android:layout_alignStart="@+id/Pilot2Stop_3"
+        android:onClick="createCSV"/>
+
+</RelativeLayout>
