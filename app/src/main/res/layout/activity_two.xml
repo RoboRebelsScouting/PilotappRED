@@ -196,7 +196,7 @@
         android:id="@+id/pos2pilot2"
         android:layout_toStartOf="@+id/Pilot1Drop_2"
         android:layout_marginTop="390dp"
-        android:layout_marginRight="35dp"/>
+        android:layout_marginRight="35dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -252,26 +252,6 @@
         android:enabled="false"
         android:onClick="P2position_3stop"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos3pilot1"
-        android:layout_alignBottom="@+id/Pilot1Stop_3"
-        android:layout_toEndOf="@+id/Pilot1Stop_3"
-        android:layout_toStartOf="@+id/Pilot1Drop_3"
-        android:layout_marginBottom="25dp"
-        android:layout_marginLeft="30dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos3pilot2"
-        android:layout_alignBottom="@+id/Pilot2Stop_3"
-        android:layout_toEndOf="@+id/Pilot2Stop_3"
-        android:layout_toStartOf="@+id/Pilot2Drop_3"
-        android:layout_marginBottom="25dp"
-        android:layout_marginLeft="30dp"/>
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -280,5 +260,20 @@
         android:layout_alignTop="@+id/pos2pilot2"
         android:layout_alignStart="@+id/Pilot2Stop_3"
         android:onClick="createCSV"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos3pilot1"
+        android:layout_alignTop="@+id/pos1pilot1"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pos3pilot2"
+        android:layout_alignBaseline="@+id/Pilot2Stop_3"
+        android:layout_alignBottom="@+id/Pilot2Stop_3"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

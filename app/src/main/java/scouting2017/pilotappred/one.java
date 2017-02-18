@@ -13,6 +13,7 @@ public class one extends AppCompatActivity {
     public static String strEvent;
     public static String strMatch;
     public static Variables myAppVariables;
+    public static boolean Redteam;
 
 
     @Override
@@ -27,12 +28,14 @@ public class one extends AppCompatActivity {
         CheckBox redCheck = (CheckBox)findViewById(R.id.redTeam);
         redCheck.setChecked(false);
         myAppVariables.color = "blue";
+        Redteam = false; //blue is not red
 
     }
     public void pickRed(View view){
         CheckBox blueCheck = (CheckBox)findViewById(R.id.blueTeam);
         blueCheck.setChecked(false);
         myAppVariables.color = "red";
+        Redteam = true; // red is red
     }
 
     public void toPage2(View view){
