@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,193 +11,31 @@
     tools:context="scouting2017.pilotappred.two"
     android:clickable="true">
 
-    <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/airship"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <Button
         style="?android:attr/buttonStyleSmall"
-        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Gear At Position 1"
+        android:text="Gear 1"
         android:id="@+id/pos1go"
         android:clickable="true"
         android:background="#1eed14"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="90dp"
         android:layout_alignBottom="@+id/imageView"
         android:layout_alignParentStart="false"
         android:layout_marginBottom="131dp"
         android:enabled="true"
-        android:onClick="position_1go"/>
+        android:onClick="position_1go"
+        android:elevation="20dp"
+        android:layout_width="105dp" />
+
 
     <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="Gear At Position 2"
-        android:id="@+id/pos2go"
-        android:clickable="true"
-        android:background="#1eed14"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:enabled="true"
-        android:onClick="position_2go"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="Gear At Position 3"
-        android:id="@+id/pos3go"
-        android:clickable="true"
-        android:background="#1eed14"
-        android:layout_alignTop="@+id/pos1go"
-        android:layout_toEndOf="@+id/imageView"
-        android:layout_marginStart="61dp"
-        android:enabled="true"
-        android:onClick="position_3go"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="Drop"
-        android:id="@+id/Pilot1Drop_1"
-        android:layout_alignStart="@+id/pos1go"
-        android:layout_marginTop="130dp"
-        android:background="#f7ff00"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P1position_1drop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="Stop"
-        android:id="@+id/Pilot1Stop_1"
-        android:layout_marginLeft="80dp"
-        android:layout_alignStart="@+id/pos1go"
-        android:layout_marginTop="130dp"
-        android:background="#ff0000"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P1position_1stop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="Drop"
-        android:id="@+id/Pilot2Drop_1"
-        android:background="#f7ff00"
-        android:layout_alignStart="@+id/Pilot1Drop_1"
-        android:layout_marginTop="210dp"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P2position_1drop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="Stop"
-        android:id="@+id/Pilot2Stop_1"
-        android:background="#ff0000"
-        android:layout_marginLeft="80dp"
-        android:layout_alignStart="@+id/pos1go"
-        android:layout_marginTop="210dp"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P2position_1stop"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/pos1pilot1"
-        android:layout_marginTop="160dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos1pilot2"
-        android:layout_marginTop="245dp" />
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:text="Drop"
-        android:id="@+id/Pilot1Drop_2"
-        android:background="#f7ff00"
-        android:layout_below="@+id/pos2go"
-        android:layout_alignStart="@+id/pos2go"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P1position_2drop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:text="Drop"
-        android:id="@+id/Pilot2Drop_2"
-        android:background="#f7ff00"
-        android:layout_below="@+id/Pilot1Drop_2"
-        android:layout_alignStart="@+id/pos2go"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P2position_2drop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:text="Stop"
-        android:id="@+id/Pilot1Stop_2"
-        android:background="#ff0000"
-        android:layout_alignBottom="@+id/Pilot1Drop_2"
-        android:layout_toEndOf="@+id/Pilot1Drop_2"
-        android:layout_marginLeft="9dp"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P1position_2stop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="50dp"
-        android:text="Stop"
-        android:id="@+id/Pilot2Stop_2"
-        android:layout_marginLeft="80dp"
-        android:background="#ff0000"
-        android:layout_alignTop="@+id/Pilot2Drop_2"
-        android:layout_alignEnd="@+id/Pilot1Stop_2"
-        android:clickable="true"
-        android:enabled="false"
-        android:onClick="P2position_2stop"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos2pilot1"
-        android:layout_toStartOf="@+id/Pilot1Drop_2"
-        android:layout_marginTop="325dp"
-        android:layout_marginRight="35dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos2pilot2"
-        android:layout_toStartOf="@+id/Pilot1Drop_2"
-        android:layout_marginTop="390dp"
-        android:layout_marginRight="35dp" />
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:onClick="createCSV"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -206,10 +45,25 @@
         android:id="@+id/Pilot1Drop_3"
         android:background="#f7ff00"
         android:clickable="true"
-        android:layout_alignStart="@+id/pos3go"
-        android:layout_marginTop="130dp"
         android:enabled="false"
-        android:onClick="P1position_3drop"/>
+        android:onClick="P1position_3drop"
+        android:layout_alignBottom="@+id/Pilot1Stop_2"
+        android:layout_alignStart="@+id/pos3go"
+        android:elevation="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot2Stop_2"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_2stop"
+        android:layout_alignBottom="@+id/Pilot2Drop_2"
+        android:layout_alignStart="@+id/Pilot1Stop_2"
+        android:elevation="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -219,24 +73,11 @@
         android:id="@+id/Pilot2Drop_3"
         android:background="#f7ff00"
         android:clickable="true"
-        android:layout_alignTop="@+id/Pilot2Stop_1"
+        android:enabled="false"
+        android:onClick="P2position_3drop"
+        android:layout_alignBottom="@+id/Pilot2Stop_2"
         android:layout_alignStart="@+id/Pilot1Drop_3"
-        android:enabled="false"
-        android:onClick="P2position_3drop"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:text="Stop"
-        android:id="@+id/Pilot1Stop_3"
-        android:layout_marginLeft="9dp"
-        android:background="#ff0000"
-        android:clickable="true"
-        android:layout_alignBottom="@+id/Pilot1Drop_3"
-        android:layout_toEndOf="@+id/Pilot1Drop_3"
-        android:enabled="false"
-        android:onClick="P1position_3stop"/>
+        android:elevation="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -245,35 +86,343 @@
         android:text="Stop"
         android:id="@+id/Pilot2Stop_3"
         android:background="#ff0000"
-        android:layout_marginLeft="9dp"
         android:clickable="true"
-        android:layout_alignBottom="@+id/Pilot2Drop_3"
-        android:layout_toEndOf="@+id/Pilot2Drop_3"
         android:enabled="false"
-        android:onClick="P2position_3stop"/>
+        android:onClick="P2position_3stop"
+        android:layout_alignBottom="@+id/Pilot2Drop_3"
+        android:layout_alignStart="@+id/Pilot1Stop_3"
+        android:elevation="20dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/Pilot1Drop_1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"
+        android:id="@+id/text1" />
 
     <Button
+        android:text="Rotor Error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:id="@+id/submit"
-        android:layout_alignTop="@+id/pos2pilot2"
-        android:layout_alignStart="@+id/Pilot2Stop_3"
-        android:onClick="createCSV"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos3pilot1"
-        android:layout_alignTop="@+id/pos1pilot1"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/pos3pilot2"
+        android:id="@+id/P2rotor"
+        android:textSize="12sp"
+        android:elevation="20dp"
         android:layout_alignBaseline="@+id/Pilot2Stop_3"
         android:layout_alignBottom="@+id/Pilot2Stop_3"
+        android:layout_alignParentEnd="true"
+        android:onClick="P2rotor"/>
+
+    <Button
+        android:text="Rotor Error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P1rotor"
+        android:textSize="12sp"
+        android:elevation="20dp"
+        android:onClick="P1rotor"
+        android:layout_alignTop="@+id/Pilot1Stop_3"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/P1noRope"
+        android:layout_toEndOf="@+id/P2rope"
+        android:id="@+id/P2noRope"
+        android:background="#ff0000"
+        android:onClick="P2noRope"
+        android:enabled="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_1"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_1stop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot1Drop_1"
+        android:layout_alignEnd="@+id/undo1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot2Stop_1"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_1stop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot2Drop_1"
+        android:layout_alignEnd="@+id/undo1" />
+
+    <Button
+        android:text="undo"
+        android:layout_height="wrap_content"
+        android:id="@+id/undo1"
+        android:layout_width="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pos1go"
+        android:onClick="position_1UNDO"
+        android:enabled="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="wrap_content"
+        android:text="Gear 2"
+        android:id="@+id/pos2go"
+        android:clickable="true"
+        android:background="#1eed14"
+        android:enabled="true"
+        android:onClick="position_2go"
+        android:elevation="20dp"
+        android:layout_width="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="320dp"/>
+
+    <Button
+        android:text="Undo"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/undo2"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pos2go"
+        android:onClick="position_2UNDO"
+        android:enabled="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_2"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_2stop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot1Drop_2"
+        android:layout_alignEnd="@+id/undo2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_height="wrap_content"
+        android:text="Gear 3"
+        android:id="@+id/pos3go"
+        android:clickable="true"
+        android:background="#1eed14"
+        android:enabled="true"
+        android:onClick="position_3go"
+        android:elevation="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/P2noRope"
+        android:layout_width="105dp" />
+
+    <Button
+        android:text="undo"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/undo3"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/pos3go"
+        android:onClick="position_3UNDO"
+        android:enabled="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Stop"
+        android:id="@+id/Pilot1Stop_3"
+        android:background="#ff0000"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_3stop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot1Drop_3"
+        android:layout_alignEnd="@+id/undo3" />
+
+    <Button
+        android:text="ROPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:id="@+id/P2rope"
+        android:layout_alignBaseline="@+id/P2noRope"
+        android:layout_alignBottom="@+id/P2noRope"
+        android:layout_toEndOf="@+id/pos2go"
+        android:background="#fff282"
+        android:onClick="P2rope"
+        android:enabled="false"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot1Drop_1"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_1drop"
+        android:layout_marginTop="15dp"
+        android:elevation="20dp"
+        android:layout_below="@+id/undo1"
+        android:layout_alignStart="@+id/pos1go" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot2Drop_1"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_1drop"
+        android:elevation="20dp"
+        android:layout_alignStart="@+id/Pilot1Drop_1"
+        android:layout_below="@id/Pilot1Drop_1"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot1Drop_2"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P1position_2drop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot1Stop_1"
+        android:layout_alignStart="@+id/pos2go" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="Drop"
+        android:id="@+id/Pilot2Drop_2"
+        android:background="#f7ff00"
+        android:clickable="true"
+        android:enabled="false"
+        android:onClick="P2position_2drop"
+        android:elevation="20dp"
+        android:layout_alignBottom="@+id/Pilot2Stop_1"
+        android:layout_alignStart="@+id/Pilot1Drop_2" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:layout_alignBaseline="@+id/Pilot2Drop_1"
+        android:layout_alignBottom="@+id/Pilot2Drop_1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text3"
+        android:layout_above="@+id/P1noRope"
+        android:layout_toEndOf="@+id/Pilot2Stop_1"
+        android:layout_alignTop="@+id/text4" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text4"
+        android:layout_above="@+id/P2noRope"
+        android:layout_toEndOf="@+id/Pilot2Stop_2"
+        android:layout_marginStart="33dp" />
+
+    <Button
+        android:text="ROPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P1rope"
+        android:layout_marginRight="47dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignBaseline="@id/P1noRope"
+        android:layout_toEndOf="@id/pos1go"
+        android:background="#fff282"
+        android:onClick="P1rope"
+        android:enabled="false"/>
+
+    <Button
+        android:text="EARLY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text3"
+        android:layout_marginLeft="245dp"
+        android:id="@+id/early1"
+        android:background="#23e1ff"
+        android:onClick="P1early"
+        android:enabled="true"/>
+
+    <Button
+        android:text="EARLY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/early2"
+        android:layout_above="@+id/text4"
+        android:layout_marginLeft="510dp"
+        android:background="#23e1ff"
+        android:onClick="P2early"
+        android:enabled="true"/>
+
+    <Button
+        android:text="Forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/P1noRope"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/text3"
+        android:layout_marginStart="22dp"
+        android:background="#ff0000"
+        android:onClick="P1noRope"
+        android:enabled="false"/>
+
+    <Button
+        android:text="GO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/Pilot2Drop_1"
+        android:id="@+id/alarm"
+        android:onClick="alarm"
+        android:enabled="true"/>
+
+    <TextView
+        android:text="GEAR #"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gears"
+        android:layout_alignBaseline="@+id/undo3"
+        android:layout_alignBottom="@+id/undo3"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="18dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="ROPE #"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/early1"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ropes"
+        android:textSize="24sp" />
 
 </RelativeLayout>

@@ -19,8 +19,10 @@ public class Variables {
     public long pos1go;
     public long pos2go;
     public long pos3go;
+    public int gear;
+    public int rope;
     public String color;
-    public String match = one.strMatch;
+    public int match;
     public long startTime;
     public String eventName;
     public List<event> eventList;
@@ -46,12 +48,15 @@ public class Variables {
     }
 
     public void reset(){
+        gear = 0;
+        rope = 0;
         pos1go = 0;
         pos2go = 0;
         pos3go = 0;
-        match = new String();
+        match = 1;
         eventList = new ArrayList<event>();
         eventName = new String();
+        color = "";
     }
 
     void csvCreate(Activity theActivity) {

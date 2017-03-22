@@ -33,17 +33,6 @@
     <EditText
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:id="@+id/Event"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="107dp"
-        android:hint="Event Name"
-        android:editable="true"
-        android:inputType="text" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="50dp"
         android:id="@+id/Match"
         android:layout_alignBottom="@+id/Event"
         android:layout_alignStart="@+id/Pilot2"
@@ -84,4 +73,14 @@
         android:checked="false"
         android:clickable="true"
         android:onClick="pickRed"/>
+
+    <TextView
+        android:text="wpi"
+        android:layout_width="200dp"
+        android:id="@+id/Event"
+        android:layout_marginBottom="31dp"
+        android:layout_above="@+id/Next"
+        android:layout_alignParentStart="true"
+        android:textSize="25sp"
+        android:layout_height="35dp" />
 </RelativeLayout>
