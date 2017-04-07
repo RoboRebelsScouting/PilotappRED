@@ -26,8 +26,8 @@ public class two extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
-        if (myAppVariables == null){
-            myAppVariables = new Variables();
+        if (one.myAppVariables == null){
+            one.myAppVariables = new Variables();
         }
         if (one.Redteam == false) {
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.BLUE));
@@ -70,6 +70,10 @@ public class two extends AppCompatActivity {
 
         TextView Pilot2rope = (TextView) findViewById(R.id.text4);
         Pilot2rope.setText(one.strPilot2);
+
+        TextView gears = (TextView) findViewById(R.id.gears);
+        gears.setText("0");
+        Integer A = one.myAppVariables.gear;
     }
 
     /* public void setBar(View view){
@@ -87,9 +91,9 @@ public class two extends AppCompatActivity {
     } */
 
     public void position_1go(View view){
-        myAppVariables.gear = myAppVariables.gear + 1;
+        one.myAppVariables.gear = one.myAppVariables.gear + 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos1go).setEnabled(false);
         findViewById(R.id.Pilot1Drop_1).setEnabled(true);
         findViewById(R.id.Pilot1Stop_1).setEnabled(true);
@@ -104,9 +108,9 @@ public class two extends AppCompatActivity {
         // myAppVariables.pos1go = position_1go.eventTime;
     }
     public void position_1UNDO(View view){
-        myAppVariables.gear = myAppVariables.gear - 1;
+        one.myAppVariables.gear = one.myAppVariables.gear - 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos1go).setEnabled(true);
         findViewById(R.id.undo1).setEnabled(false);
         findViewById(R.id.Pilot1Drop_1).setEnabled(false);
@@ -177,9 +181,9 @@ public class two extends AppCompatActivity {
 
 
     public void position_2go(View view){
-        myAppVariables.gear = myAppVariables.gear + 1;
+        one.myAppVariables.gear = one.myAppVariables.gear + 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos2go).setEnabled(false);
         findViewById(R.id.Pilot1Drop_2).setEnabled(true);
         findViewById(R.id.Pilot1Stop_2).setEnabled(true);
@@ -194,9 +198,9 @@ public class two extends AppCompatActivity {
         // myAppVariables.pos2go = position_2go.eventTime;
     }
     public void position_2UNDO(View view){
-        myAppVariables.gear = myAppVariables.gear - 1;
+        one.myAppVariables.gear = one.myAppVariables.gear - 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos2go).setEnabled(true);
         findViewById(R.id.undo2).setEnabled(false);
         findViewById(R.id.Pilot1Drop_2).setEnabled(false);
@@ -267,9 +271,9 @@ public class two extends AppCompatActivity {
 
 
     public void position_3go(View view){
-        myAppVariables.gear = myAppVariables.gear + 1;
+        one.myAppVariables.gear = one.myAppVariables.gear + 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos3go).setEnabled(false);
         findViewById(R.id.Pilot1Drop_3).setEnabled(true);
         findViewById(R.id.Pilot1Stop_3).setEnabled(true);
@@ -284,9 +288,9 @@ public class two extends AppCompatActivity {
         // myAppVariables.pos3go = position_3go.eventTime;
     }
     public void position_3UNDO(View view){
-        myAppVariables.gear = myAppVariables.gear - 1;
+        one.myAppVariables.gear = one.myAppVariables.gear - 1;
         TextView gears = (TextView) findViewById(R.id.gears);
-        gears.setText(Integer.toString(myAppVariables.gear));
+        gears.setText(Integer.toString(one.myAppVariables.gear));
         findViewById(R.id.pos3go).setEnabled(true);
         findViewById(R.id.undo3).setEnabled(false);
         findViewById(R.id.Pilot1Drop_3).setEnabled(false);
@@ -370,9 +374,9 @@ public class two extends AppCompatActivity {
         one.myAppVariables.eventList.add(alarm);
     }
     public void P1early (View view){
-        myAppVariables.rope = myAppVariables.rope + 1;
+        one.myAppVariables.rope = one.myAppVariables.rope + 1;
         TextView ropes = (TextView) findViewById(R.id.ropes);
-        ropes.setText(Integer.toString(myAppVariables.rope));
+        ropes.setText(Integer.toString(one.myAppVariables.rope));
         event P1early = new event();
         P1early.eventTime = System.currentTimeMillis();
         P1early.eventTime = (P1early.eventTime - one.myAppVariables.startTime)/1000;
@@ -381,9 +385,9 @@ public class two extends AppCompatActivity {
         one.myAppVariables.eventList.add(P1early);
     }
     public void P2early (View view){
-        myAppVariables.rope = myAppVariables.rope + 1;
+        one.myAppVariables.rope = one.myAppVariables.rope + 1;
         TextView ropes = (TextView) findViewById(R.id.ropes);
-        ropes.setText(Integer.toString(myAppVariables.rope));
+        ropes.setText(Integer.toString(one.myAppVariables.rope));
         event P2early = new event();
         P2early.eventTime = System.currentTimeMillis();
         P2early.eventTime = (P2early.eventTime - one.myAppVariables.startTime)/1000;
@@ -392,9 +396,9 @@ public class two extends AppCompatActivity {
         one.myAppVariables.eventList.add(P2early);
     }
     public void P1rope (View view){
-        myAppVariables.rope = myAppVariables.rope + 1;
+        one.myAppVariables.rope = one.myAppVariables.rope + 1;
         TextView ropes = (TextView) findViewById(R.id.ropes);
-        ropes.setText(Integer.toString(myAppVariables.rope));
+        ropes.setText(Integer.toString(one.myAppVariables.rope));
         event P1rope = new event();
         P1rope.eventTime = System.currentTimeMillis();
         P1rope.eventTime = (P1rope.eventTime - one.myAppVariables.startTime)/1000;
@@ -403,9 +407,9 @@ public class two extends AppCompatActivity {
         one.myAppVariables.eventList.add(P1rope);
     }
     public void P2rope (View view){
-        myAppVariables.rope = myAppVariables.rope + 1;
+        one.myAppVariables.rope = one.myAppVariables.rope + 1;
         TextView ropes = (TextView) findViewById(R.id.ropes);
-        ropes.setText(Integer.toString(myAppVariables.rope));
+        ropes.setText(Integer.toString(one.myAppVariables.rope));
         event P2rope = new event();
         P2rope.eventTime = System.currentTimeMillis();
         P2rope.eventTime = (P2rope.eventTime - one.myAppVariables.startTime)/1000;
@@ -428,12 +432,6 @@ public class two extends AppCompatActivity {
         P2noRope.eventType = "noRope";
         P2noRope.eventValue = one.strPilot2;
         one.myAppVariables.eventList.add(P2noRope);
-    }
-
-
-
-    public void createCSV(View view){
-        one.myAppVariables.csvCreate(this);
     }
 
     /* first set of rope buttons
@@ -557,14 +555,9 @@ public class two extends AppCompatActivity {
         one.myAppVariables.eventList.add(P2rotor);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Intent intent = new Intent(this, one.class);
-        String eventNameInfo = one.myAppVariables.eventName;
-        Integer match = one.myAppVariables.match;
-        one.myAppVariables.reset();
-        one.myAppVariables.eventName = eventNameInfo;
-        one.myAppVariables.match = match +1;
+    public void toPage3(View view){
+        Intent intent = new Intent(this, three.class);
         startActivity(intent);
     }
+
 }

@@ -28,6 +28,12 @@ public class one extends AppCompatActivity {
         setContentView(R.layout.activity_one);
         EditText match = (EditText) findViewById(Match);
         match.setText(Integer.toString(myAppVariables.match));
+
+        if (myAppVariables == null) {
+            myAppVariables = new Variables () ;
+        }
+
+        myAppVariables.startBluetooth(this);
     }
 
     public void pickBlue(View view){

@@ -18,7 +18,8 @@
         android:editable="true"
         android:inputType="number"
         android:clickable="false"
-        android:hint="Robot #" />
+        android:hint="Robot #"
+        android:maxLength="4"/>
 
     <EditText
         android:layout_width="250dp"
@@ -28,7 +29,8 @@
         android:inputType="number"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:hint="Robot #" />
+        android:hint="Robot #"
+        android:maxLength="4"/>
 
     <EditText
         android:layout_width="200dp"
@@ -75,7 +77,7 @@
         android:onClick="pickRed"/>
 
     <TextView
-        android:text="wpi"
+        android:text="UNH"
         android:layout_width="200dp"
         android:id="@+id/Event"
         android:layout_marginBottom="31dp"
